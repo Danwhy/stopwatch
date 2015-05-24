@@ -44,10 +44,15 @@ var T = (function(){
 		startTimer(new Date().getTime() - T.pausedTime);
 	}
 
+	var split = function(){
+		$('#timer').after('<div class="split">00:00:00</div>');
+	}
+
 	return {
 		startTimer : startTimer,
 		reset : reset,
 		pause : pause,
-		continueFunc : continueFunc
+		continueFunc : continueFunc,
+		split: split
 	}
 }());

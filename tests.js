@@ -98,3 +98,8 @@ test('timer adds one minute after 60 seconds', function( assert ){
 		done();
 	}, 1100);
 });
+
+test('split function adds another timer', function( assert ){
+	T.split();
+	ok($('.split').length);
+});
